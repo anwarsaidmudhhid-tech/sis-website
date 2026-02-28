@@ -26,8 +26,11 @@
   <a href="contact.html" class="nav-cta">Get In Touch</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — FIX 2: logo watermark in background -->
 <section class="hero" id="home">
+  <div class="hero-logo-watermark">
+    <img src="logo.jpg" alt="" />
+  </div>
   <div class="hero-content">
     <img src="logo.jpg" alt="Silvertown International School Logo" class="hero-logo" />
     <div class="hero-badge">FOUNDING PHASE · EST. 2031</div>
@@ -78,12 +81,13 @@
   </div>
 </section>
 
-<!-- QUICK ABOUT -->
+<!-- ABOUT — FIX 1: float card no longer overlaps logo -->
 <section class="home-about">
   <div class="home-about-grid">
-    <div class="home-about-img">
-      <img src="logo.jpg" alt="SIS" />
-      <div class="about-card-float">
+    <div class="home-about-img-wrap">
+      <img src="logo.jpg" alt="SIS Logo" class="home-about-img" />
+      <!-- FIX 1: card moved BELOW the image, not on top -->
+      <div class="founding-badge">
         <div class="num">2026</div>
         <div class="lbl">FOUNDING YEAR</div>
       </div>
@@ -92,8 +96,69 @@
       <p class="section-eyebrow" style="text-align:left">Our Heritage</p>
       <h2 class="section-title" style="text-align:left">Two Port Cities.<br><span class="em">One School.</span></h2>
       <p>The name Silvertown carries a story unlike any other — a district in East London's Royal Docks that once connected the world through the first transatlantic telegraph cables. Like Silvertown, Mombasa is a historic port city built on trade, connection, and resilience.</p>
-      <p>One vision unites them: a world-class school that connects the local to the global.</p>
+      <p style="margin-top:15px">One vision unites them: a world-class school that connects the local to the global.</p>
       <a href="heritage.html" class="btn-navy" style="margin-top:25px; display:inline-block">Discover Our Heritage →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FIX 3: SCHOOL HOUSES — navy background so text is visible -->
+<section class="houses-home">
+  <p class="section-eyebrow">School Houses</p>
+  <h2 class="section-title" style="color:white">The Four <span class="em">Houses</span></h2>
+  <p class="section-subtitle">Named after the pioneers of Silvertown, East London.</p>
+  <div class="houses-home-grid">
+    <div class="house-home-card">
+      <div class="house-initial">S</div>
+      <h3>Silver House</h3>
+      <p>Vision, entrepreneurship, the courage to build from nothing.</p>
+    </div>
+    <div class="house-home-card">
+      <div class="house-initial">T</div>
+      <h3>Tate House</h3>
+      <p>Excellence, culture, and giving back to society.</p>
+    </div>
+    <div class="house-home-card">
+      <div class="house-initial">L</div>
+      <h3>Lyle House</h3>
+      <p>Determination, industry, relentless pursuit of quality.</p>
+    </div>
+    <div class="house-home-card">
+      <div class="house-initial">B</div>
+      <h3>Brunner House</h3>
+      <p>Innovation, discovery, and scientific thinking.</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:40px">
+    <a href="school.html" class="btn-gold">Learn More About Our School</a>
+  </div>
+</section>
+
+<!-- STUDENT LIFE — FIX 5: student photos -->
+<section class="student-life">
+  <p class="section-eyebrow">Student Life</p>
+  <h2 class="section-title">The <span class="em">Silvertown Experience</span></h2>
+  <div class="divider"><div class="divider-diamond"></div></div>
+  <div class="photos-grid">
+    <div class="photo-item photo-large">
+      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80" alt="Students in classroom" />
+      <div class="photo-caption">Academic Excellence</div>
+    </div>
+    <div class="photo-item">
+      <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="School building" />
+      <div class="photo-caption">World-Class Facilities</div>
+    </div>
+    <div class="photo-item">
+      <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80" alt="Students studying" />
+      <div class="photo-caption">Collaborative Learning</div>
+    </div>
+    <div class="photo-item">
+      <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&q=80" alt="Students together" />
+      <div class="photo-caption">Global Community</div>
+    </div>
+    <div class="photo-item">
+      <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80" alt="Classroom learning" />
+      <div class="photo-caption">Cambridge Curriculum</div>
     </div>
   </div>
 </section>
@@ -106,10 +171,11 @@
   </div>
 </section>
 
+<!-- FIX 4: footer logo larger -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="logo.jpg" alt="SIS Logo" class="footer-logo" />
+      <img src="logo.jpg" alt="SIS Logo" class="footer-logo-lg" />
       <div class="f-name">SILVERTOWN INTERNATIONAL SCHOOL</div>
       <div class="f-loc">MOMBASA · KENYA · EST. 2031</div>
       <div class="f-motto">"Connecting Minds, Bridging Worlds"</div>

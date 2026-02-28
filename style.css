@@ -1084,3 +1084,208 @@ footer {
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .theme-card { grid-template-columns: 60px 1fr; }
 }
+
+/* ══════════════════════════════════════════
+   V5 FIXES
+══════════════════════════════════════════ */
+
+/* FIX 2: Hero logo watermark */
+.hero-logo-watermark {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px; height: 500px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-logo-watermark img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.hero-content { position: relative; z-index: 1; }
+
+/* FIX 1: About section — no overlap */
+.home-about-img-wrap {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 20px;
+}
+.home-about-img {
+  width: 100%; max-width: 420px;
+  border: 6px solid var(--off-white);
+  box-shadow: 0 20px 60px rgba(10,31,68,0.1);
+  border-radius: 4px;
+}
+.founding-badge {
+  background: var(--gold);
+  padding: 18px 35px; text-align: center;
+  width: 100%; max-width: 420px;
+}
+.founding-badge .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem; font-weight: 900;
+  color: var(--navy); line-height: 1;
+}
+.founding-badge .lbl {
+  font-size: 0.7rem; letter-spacing: 3px;
+  color: var(--navy); font-weight: 700;
+  margin-top: 4px;
+}
+
+/* FIX 3: School houses on navy background */
+.houses-home {
+  background: var(--navy);
+  padding: 80px 6%;
+}
+.houses-home-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px; background: rgba(255,255,255,0.06);
+  max-width: 1100px; margin: 0 auto 0;
+}
+.house-home-card {
+  background: rgba(255,255,255,0.03);
+  padding: 40px 25px; text-align: center;
+  transition: background 0.3s;
+}
+.house-home-card:hover { background: rgba(212,175,55,0.08); }
+.house-home-card .house-initial {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; font-weight: 900;
+  margin: 0 auto 18px;
+}
+.house-home-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--white); font-size: 1.05rem;
+  margin-bottom: 10px; font-weight: 700;
+}
+.house-home-card p {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.82rem; line-height: 1.6; font-weight: 300;
+}
+
+/* FIX 4: Footer logo larger */
+.footer-logo-lg {
+  width: 110px; height: 110px;
+  border-radius: 50%; object-fit: cover;
+  margin-bottom: 18px;
+  border: 3px solid rgba(212,175,55,0.4);
+  display: block;
+}
+
+/* FIX 5: Student photos grid */
+.student-life { background: var(--white); }
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 12px;
+  max-width: 1200px; margin: 0 auto;
+}
+.photo-item {
+  position: relative; overflow: hidden;
+  background: var(--navy);
+}
+.photo-item.photo-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.photo-item img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.5s;
+  min-height: 200px;
+}
+.photo-item:hover img { transform: scale(1.05); }
+.photo-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(10,31,68,0.85));
+  color: var(--white);
+  padding: 30px 18px 14px;
+  font-size: 0.8rem; letter-spacing: 2px;
+  font-weight: 500; font-family: 'Inter', sans-serif;
+}
+
+/* ── COLLAPSIBLE ACCORDION (Fix 6) ── */
+.accordion { max-width: 850px; margin: 0 auto; }
+.accordion-item {
+  border-bottom: 1px solid rgba(10,31,68,0.1);
+  overflow: hidden;
+}
+.accordion-item:first-child { border-top: 1px solid rgba(10,31,68,0.1); }
+.accordion-btn {
+  width: 100%; background: none; border: none;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 25px 5px; cursor: pointer;
+  text-align: left; transition: background 0.2s;
+}
+.accordion-btn:hover { background: rgba(212,175,55,0.04); }
+.accordion-btn-left { display: flex; align-items: center; gap: 18px; }
+.accordion-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 900;
+  color: var(--gold); min-width: 55px;
+}
+.accordion-title-wrap { text-align: left; }
+.accordion-phase {
+  color: var(--gold); font-size: 0.65rem;
+  letter-spacing: 3px; font-weight: 600; margin-bottom: 3px;
+}
+.accordion-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy); font-size: 1.1rem; font-weight: 700;
+}
+.accordion-icon {
+  font-size: 1.4rem; color: var(--gold);
+  transition: transform 0.3s; flex-shrink: 0;
+  font-weight: 300;
+}
+.accordion-item.open .accordion-icon { transform: rotate(45deg); }
+.accordion-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+  padding: 0 5px;
+}
+.accordion-item.open .accordion-body {
+  max-height: 600px;
+  padding-bottom: 25px;
+}
+.accordion-content { padding: 5px 0 0 73px; }
+.accordion-content p {
+  color: var(--text-mid); font-size: 0.92rem;
+  line-height: 1.8; font-weight: 300; margin-bottom: 15px;
+}
+.accordion-milestones { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
+.acc-milestone {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.85rem; color: var(--text-mid); font-weight: 400;
+}
+.acc-milestone.done { color: #38a169; }
+.acc-milestone.pending { color: var(--text-light); }
+.acc-milestone::before {
+  content: ''; width: 6px; height: 6px;
+  border-radius: 50%; background: currentColor;
+  flex-shrink: 0;
+}
+.acc-milestone.done::before { background: #38a169; }
+.acc-milestone.pending::before { background: #cbd5e0; }
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .houses-home-grid { grid-template-columns: repeat(2, 1fr); }
+  .photos-grid { grid-template-columns: 1fr 1fr; }
+  .photo-item.photo-large { grid-column: span 2; grid-row: span 1; }
+  .hero-logo-watermark { width: 300px; height: 300px; }
+  .accordion-content { padding-left: 0; }
+}
+@media (max-width: 480px) {
+  .houses-home-grid { grid-template-columns: 1fr 1fr; }
+  .photos-grid { grid-template-columns: 1fr; }
+  .photo-item.photo-large { grid-column: span 1; }
+}
