@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parents & Careers | Silvertown International School</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="SIS Logo" class="nav-logo-img" />
+    <div class="nav-logo-text">
+      <span class="name">SILVERTOWN INTERNATIONAL</span>
+      <span class="loc">MOMBASA · KENYA</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li class="dropdown"><a href="#">About</a><div class="dropdown-menu"><a href="heritage.html">Our Heritage</a><a href="journey.html">The Journey</a></div></li>
+    <li class="dropdown"><a href="#">School Life</a><div class="dropdown-menu"><a href="school.html">Our School</a><a href="sports.html">Sports</a><a href="news.html">News & Events</a></div></li>
+    <li><a href="parents.html" class="active">Parents</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get In Touch</a>
+  <div class="nav-hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <p class="section-eyebrow">Parents & Careers</p>
+    <h1 class="page-title">Your <span class="highlight">Partnership</span> Matters</h1>
+    <p class="page-subtitle">At Silvertown International School, parents are not just observers — they are partners. Everything on this page is designed to keep you informed, involved, and connected.</p>
+  </div>
+</section>
+
+<!-- PARENTS ACCORDION -->
+<section>
+  <p class="section-eyebrow">Parent Information</p>
+  <h2 class="section-title">Everything You <span class="em">Need to Know</span></h2>
+  <p class="section-subtitle">Click any section below to expand and read the full information. As we are in our founding phase, some details will be updated as the school develops.</p>
+
+  <div class="parents-accordion">
+
+    <!-- 1. GENERAL INFORMATION -->
+    <div class="parents-accordion-item open">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">ℹ️</div>
+          <span class="parents-accordion-title">General Information</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>Silvertown International School (SIS) is a Cambridge IGCSE secondary school being established in Mombasa, Kenya, with a target opening date of 2031. We currently operate in our founding phase — building our community, brand, and school infrastructure.</p>
+          <div class="info-box">📍 <strong>Location:</strong> Mombasa, Kenya (exact site to be confirmed in Phase 3, 2028)<br>🎓 <strong>Age Range:</strong> Year 7–11 (approx. 11–16 years)<br>📅 <strong>Target Opening:</strong> September 2031<br>🌍 <strong>School Type:</strong> Independent International School</div>
+          <p>For the most up-to-date information, follow us on social media or <a href="contact.html">register your interest</a> to receive our newsletter directly.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. ADMISSIONS -->
+    <div class="parents-accordion-item">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">🎓</div>
+          <span class="parents-accordion-title">Admissions</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>We are currently in our founding phase. Formal admissions will open in <strong>2030</strong> for our first cohort, which will begin in September 2031. However, you can register your family's interest now to be among the first to receive admissions information.</p>
+          <p><strong>Our Admissions Process (planned):</strong></p>
+          <ul>
+            <li>Expression of Interest registration (open now)</li>
+            <li>Formal application form — opens 2030</li>
+            <li>Assessment and interview (age-appropriate)</li>
+            <li>Offer of a place</li>
+            <li>Enrolment and induction</li>
+          </ul>
+          <div class="info-box">🌍 We welcome students from Kenyan families, UK diaspora, and international families. Our school is designed to serve a diverse, multicultural community united by a commitment to academic excellence.</div>
+          <p>Fees will be confirmed in 2028/29 once construction costs and operational budgets are finalised. We are committed to making Silvertown International School accessible to talented students from all backgrounds.</p>
+          <a href="contact.html" class="btn-navy" style="margin-top:5px">Register Your Interest</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. CLUBS & ACTIVITIES -->
+    <div class="parents-accordion-item">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">🎨</div>
+          <span class="parents-accordion-title">Clubs & Activities</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>At Silvertown International School, we believe that education extends beyond the classroom. Our extra-curricular programme is designed to develop the whole student — building confidence, skills, and passions that last a lifetime.</p>
+          <p><strong>Planned Clubs & Activities include:</strong></p>
+          <ul>
+            <li>Debate & Public Speaking Club</li>
+            <li>Science & Technology Club (STEM)</li>
+            <li>Art & Design Studio</li>
+            <li>Music & Performing Arts</li>
+            <li>Model United Nations (MUN)</li>
+            <li>Entrepreneurship & Business Club</li>
+            <li>Environmental & Sustainability Society</li>
+            <li>Creative Writing & Literature Club</li>
+            <li>Community Service & Volunteering</li>
+            <li>Sports Clubs (Football, Basketball, Swimming, Athletics, Tennis)</li>
+          </ul>
+          <div class="info-box">💡 The full timetable of clubs and activities will be confirmed ahead of the school opening in 2031. We welcome suggestions from our founding community.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SCHOOL UNIFORM -->
+    <div class="parents-accordion-item">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">👔</div>
+          <span class="parents-accordion-title">School Uniform</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>Silvertown International School will have a smart, professional uniform that reflects our values of excellence and pride. The uniform will incorporate our brand colours — <strong>navy blue, gold, and silver</strong> — and will be designed with the Mombasa climate in mind.</p>
+          <p><strong>Planned uniform items (to be confirmed):</strong></p>
+          <ul>
+            <li>Navy blazer with gold SIS crest</li>
+            <li>White shirt / blouse</li>
+            <li>Navy trousers / skirt / shorts</li>
+            <li>Gold and navy striped tie</li>
+            <li>Black formal shoes</li>
+            <li>PE kit — gold and navy (House colours)</li>
+            <li>School bag — navy with gold SIS logo</li>
+          </ul>
+          <div class="info-box">👔 Full uniform guidelines, approved suppliers, and pricing will be published ahead of the 2031 opening. Our House system means students will also have House-coloured sports kit representing Silver, Tate, Lyle, or Brunner House.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. SCHOOL MEALS -->
+    <div class="parents-accordion-item">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">🍽️</div>
+          <span class="parents-accordion-title">School Meals</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>Silvertown International School will provide high-quality, nutritious meals that reflect the rich culinary heritage of East Africa alongside international options. We believe that good food is fundamental to student wellbeing and academic performance.</p>
+          <p><strong>Our approach to school meals:</strong></p>
+          <ul>
+            <li>Fresh, locally sourced ingredients from Kenyan suppliers</li>
+            <li>Balanced, nutritionist-approved menus</li>
+            <li>Daily hot lunch included in school day</li>
+            <li>Catering for dietary requirements (vegetarian, vegan, allergies, religious)</li>
+            <li>Celebration of Kenyan and international cuisines</li>
+            <li>Hydration stations throughout the school</li>
+          </ul>
+          <div class="info-box">🥗 Full menu plans, allergen information, and meal payment systems will be confirmed closer to the school opening in 2031. We are committed to providing meals that students genuinely enjoy.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. PARENTMAIL & EDULINKONE -->
+    <div class="parents-accordion-item">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">📱</div>
+          <span class="parents-accordion-title">ParentMail & EduclinkOne</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>Silvertown International School is committed to clear, regular, and transparent communication with parents. We will use industry-leading platforms to keep you informed and involved in your child's education.</p>
+          <p><strong>ParentMail</strong> is our planned primary communication platform. Through ParentMail, parents will be able to:</p>
+          <ul>
+            <li>Receive school letters and announcements instantly</li>
+            <li>Make payments for school trips, meals, and activities</li>
+            <li>Respond to school surveys and forms</li>
+            <li>Receive emergency and urgent notifications</li>
+          </ul>
+          <p><strong>EduclinkOne</strong> is our planned student information system. Through this platform, parents will be able to:</p>
+          <ul>
+            <li>View their child's attendance record in real time</li>
+            <li>Access homework assignments and deadlines</li>
+            <li>Read teacher reports and progress updates</li>
+            <li>View timetables and school calendar</li>
+            <li>Communicate with teachers and form tutors</li>
+          </ul>
+          <div class="info-box">📲 Both platforms will be available as mobile apps. Full parent training and onboarding will be provided before the school opens in 2031.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. DATA PROTECTION -->
+    <div class="parents-accordion-item">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">🔒</div>
+          <span class="parents-accordion-title">Data Protection</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>Silvertown International School takes the protection of personal data extremely seriously. We are committed to full compliance with Kenya's Data Protection Act (2019) and international best practices in data security.</p>
+          <p><strong>Our data protection principles:</strong></p>
+          <ul>
+            <li>We only collect data that is necessary for educational and administrative purposes</li>
+            <li>All data is stored securely with appropriate access controls</li>
+            <li>We never share personal data with third parties without explicit consent</li>
+            <li>Parents have the right to access, correct, or request deletion of their data</li>
+            <li>We have a designated Data Protection Officer (DPO) — to be appointed before opening</li>
+          </ul>
+          <div class="info-box">🔐 Our full Data Protection Policy and Privacy Notice will be published before the school opens. Any data you share with us now (via our contact form) is used solely to keep you informed about the school's development and will never be sold or shared.</div>
+          <p>For data-related queries, please contact us at <a href="mailto:info@silvertowninternational.ac.ke">info@silvertowninternational.ac.ke</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. TERM & HOLIDAY DATES -->
+    <div class="parents-accordion-item">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">📅</div>
+          <span class="parents-accordion-title">Term & Holiday Dates</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>Silvertown International School will follow a three-term academic year, broadly aligned with the Cambridge International Education calendar and Kenya's national school year.</p>
+          <p><strong>Planned Term Structure (subject to confirmation):</strong></p>
+          <ul>
+            <li><strong>Term 1:</strong> September – December (approx. 14 weeks)</li>
+            <li><strong>Term 2:</strong> January – April (approx. 13 weeks)</li>
+            <li><strong>Term 3:</strong> April/May – July (approx. 11 weeks)</li>
+          </ul>
+          <p><strong>Holiday periods (planned):</strong></p>
+          <ul>
+            <li>Christmas/New Year Break: approx. 3–4 weeks</li>
+            <li>Easter Break: approx. 2–3 weeks</li>
+            <li>Summer Break: approx. 8 weeks</li>
+            <li>Half-term breaks within each term</li>
+            <li>Kenyan public holidays observed</li>
+          </ul>
+          <div class="info-box">📅 Exact term dates for the 2031/32 academic year will be published by January 2031. We will ensure families have maximum notice for holiday planning.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. SAFEGUARDING & WELLBEING -->
+    <div class="parents-accordion-item">
+      <button class="parents-accordion-btn" onclick="toggleParents(this)">
+        <div class="parents-accordion-btn-inner">
+          <div class="parents-accordion-icon-left">💛</div>
+          <span class="parents-accordion-title">Safeguarding & Wellbeing</span>
+        </div>
+        <span class="parents-accordion-arrow">+</span>
+      </button>
+      <div class="parents-accordion-body">
+        <div class="parents-accordion-content">
+          <p>The safety, wellbeing, and happiness of every student is our absolute priority. Silvertown International School will operate with the highest standards of safeguarding, in line with both Kenyan law and international best practices.</p>
+          <p><strong>Our safeguarding commitment:</strong></p>
+          <ul>
+            <li>A dedicated Designated Safeguarding Lead (DSL) on the senior leadership team</li>
+            <li>Rigorous DBS/background checking for all staff and volunteers</li>
+            <li>Comprehensive safeguarding policy reviewed annually</li>
+            <li>Clear and accessible reporting procedures for students, parents, and staff</li>
+            <li>Regular safeguarding training for all staff</li>
+            <li>Partnerships with Kenyan child protection authorities</li>
+          </ul>
+          <p><strong>Student Wellbeing:</strong></p>
+          <ul>
+            <li>Dedicated school counsellor and pastoral support team</li>
+            <li>Anti-bullying policy with zero tolerance</li>
+            <li>Mental health first aid trained staff</li>
+            <li>Form tutor system — every student has a named adult who knows them</li>
+            <li>Structured PSHE (Personal, Social, Health & Economic) programme</li>
+            <li>Open door policy for students and parents</li>
+          </ul>
+          <div class="info-box">💛 If you have a safeguarding concern about any child, please contact us immediately at <a href="mailto:info@silvertowninternational.ac.ke">info@silvertowninternational.ac.ke</a>. Once the school is open, a dedicated safeguarding hotline will be available 24/7.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section style="background:var(--navy)">
+  <p class="section-eyebrow">Careers at SIS</p>
+  <h2 class="section-title" style="color:white">Join Our <span class="em">Team</span></h2>
+  <p class="section-subtitle">We are building a team of exceptional educators and professionals who share our vision. Be part of something historic.</p>
+  <div class="info-grid" style="max-width:1000px; margin:0 auto">
+    <div class="info-card"><span class="info-icon">👩‍🏫</span><div class="info-label">Teaching Staff</div><div class="info-value">Cambridge-experienced subject teachers — recruitment opens 2029</div></div>
+    <div class="info-card"><span class="info-icon">🏫</span><div class="info-label">Leadership</div><div class="info-value">Principal & Senior Leadership Team — recruitment 2028</div></div>
+    <div class="info-card"><span class="info-icon">💼</span><div class="info-label">Support Staff</div><div class="info-value">Admin, IT, pastoral & facilities — recruitment opens 2029/30</div></div>
+    <div class="info-card"><span class="info-icon">🌍</span><div class="info-label">International</div><div class="info-value">We welcome applications from Kenya, UK, and internationally</div></div>
+    <div class="info-card"><span class="info-icon">📧</span><div class="info-label">Express Interest</div><div class="info-value">Send your CV to info@silvertowninternational.ac.ke</div></div>
+    <div class="info-card"><span class="info-icon">🎓</span><div class="info-label">Trainee Teachers</div><div class="info-value">Partnerships with teacher training providers — details TBC</div></div>
+  </div>
+  <div style="text-align:center; margin-top:40px">
+    <a href="contact.html" class="btn-gold">Register Career Interest</a>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="cta-inner">
+    <h2>Have a question not answered here? <em>Get in touch.</em></h2>
+    <a href="contact.html" class="btn-gold">Contact Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.jpg" alt="SIS Logo" class="footer-logo-lg" />
+      <div class="f-name">SILVERTOWN INTERNATIONAL SCHOOL</div>
+      <div class="f-loc">MOMBASA · KENYA · EST. 2031</div>
+      <div class="f-motto">"Connecting Minds, Bridging Worlds"</div>
+      <div class="footer-socials">
+        <a href="https://instagram.com/SilvertownIntlSchool" class="footer-social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@SilvertownIntlSchool" class="footer-social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://linkedin.com/company/silvertown-international-school" class="footer-social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/SilvertownISK" class="footer-social-icon" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://facebook.com/SilvertownIntlSchool" class="footer-social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Navigate</h5><ul><li><a href="heritage.html">Our Heritage</a></li><li><a href="school.html">Our School</a></li><li><a href="sports.html">Sports</a></li><li><a href="news.html">News & Events</a></li><li><a href="parents.html">Parents</a></li><li><a href="journey.html">The Journey</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Follow Us</h5><ul><li><a href="https://instagram.com/SilvertownIntlSchool" target="_blank">Instagram</a></li><li><a href="https://tiktok.com/@SilvertownIntlSchool" target="_blank">TikTok</a></li><li><a href="https://linkedin.com/company/silvertown-international-school" target="_blank">LinkedIn</a></li><li><a href="https://twitter.com/SilvertownISK" target="_blank">X (Twitter)</a></li><li><a href="https://facebook.com/SilvertownIntlSchool" target="_blank">Facebook</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Silvertown International School · All Rights Reserved</p><p class="footer-hash">#SilvertownISK</p></div>
+</footer>
+
+<a href="https://wa.me/" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="#" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
+<script>
+window.addEventListener('scroll',()=>{const b=document.getElementById('backToTop');window.scrollY>400?b.classList.add('visible'):b.classList.remove('visible');});
+function toggleParents(btn){const item=btn.closest('.parents-accordion-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.parents-accordion-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
+function toggleMobileNav(){const l=document.querySelector('.nav-links');l.style.display=l.style.display==='flex'?'none':'flex';if(l.style.display==='flex'){l.style.flexDirection='column';l.style.position='absolute';l.style.top='70px';l.style.left='0';l.style.right='0';l.style.background='rgba(10,31,68,0.98)';l.style.padding='20px 0';l.style.zIndex='999';}}
+</script>
+</body>
+</html>

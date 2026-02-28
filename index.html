@@ -6,6 +6,7 @@
   <title>Silvertown International School | Mombasa, Kenya</title>
   <meta name="description" content="Silvertown International School — Cambridge IGCSE coming to Mombasa, Kenya. Globally connected, academically refined, unshakably resilient.">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
@@ -18,21 +19,40 @@
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="heritage.html">Heritage</a></li>
-    <li><a href="school.html">Our School</a></li>
-    <li><a href="journey.html">The Journey</a></li>
+    <li class="dropdown"><a href="#">About</a>
+      <div class="dropdown-menu">
+        <a href="heritage.html">Our Heritage</a>
+        <a href="journey.html">The Journey</a>
+      </div>
+    </li>
+    <li class="dropdown"><a href="#">School Life</a>
+      <div class="dropdown-menu">
+        <a href="school.html">Our School</a>
+        <a href="sports.html">Sports</a>
+        <a href="news.html">News & Events</a>
+      </div>
+    </li>
+    <li><a href="parents.html">Parents</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <a href="contact.html" class="nav-cta">Get In Touch</a>
+  <div class="nav-hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
-<!-- HERO — FIX 2: logo watermark in background -->
+<!-- HERO — animated slideshow -->
 <section class="hero" id="home">
-  <div class="hero-logo-watermark">
-    <img src="logo.jpg" alt="" />
+  <div class="hero-slides">
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
   </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-logo-watermark"><img src="logo.jpg" alt="" /></div>
   <div class="hero-content">
-    <img src="logo.jpg" alt="Silvertown International School Logo" class="hero-logo" />
+    <img src="logo.jpg" alt="Silvertown International School" class="hero-logo" />
     <div class="hero-badge">FOUNDING PHASE · EST. 2031</div>
     <h1>SILVERTOWN<br><span class="highlight">INTERNATIONAL SCHOOL</span></h1>
     <p class="hero-location">📍 MOMBASA, KENYA</p>
@@ -51,7 +71,7 @@
   </div>
 </section>
 
-<!-- THREE PILLARS -->
+<!-- PILLARS -->
 <section class="pillars">
   <p class="section-eyebrow">Our Foundation</p>
   <h2 class="section-title">Built on <span class="em">Three Pillars</span></h2>
@@ -61,7 +81,7 @@
       <span class="pillar-number">01</span>
       <div class="pillar-icon">🌐</div>
       <h3>Global Connectivity</h3>
-      <p>Named after Silvertown, East London — where the world's first transatlantic telegraph cables were made. Our school bridges students to international communities, cultures, and futures.</p>
+      <p>Named after Silvertown, East London — where the world's first transatlantic telegraph cables were made. Our school bridges students to international communities and futures.</p>
       <a href="heritage.html" class="pillar-link">Read the Story →</a>
     </div>
     <div class="pillar-card">
@@ -75,18 +95,17 @@
       <span class="pillar-number">03</span>
       <div class="pillar-icon">🔥</div>
       <h3>The Silvertown Spirit</h3>
-      <p>Silvertown survived explosions, wars, and industrial collapse — and reinvented itself every time. We teach our students that same unshakable spirit: adaptability, innovation, and grit.</p>
+      <p>Silvertown survived explosions, wars, and industrial collapse — and reinvented itself every time. We teach that same unshakable spirit: adaptability, innovation, and grit.</p>
       <a href="journey.html" class="pillar-link">Our Journey →</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT — FIX 1: float card no longer overlaps logo -->
+<!-- ABOUT -->
 <section class="home-about">
   <div class="home-about-grid">
     <div class="home-about-img-wrap">
-      <img src="logo.jpg" alt="SIS Logo" class="home-about-img" />
-      <!-- FIX 1: card moved BELOW the image, not on top -->
+      <img src="logo.jpg" alt="SIS" class="home-about-img" />
       <div class="founding-badge">
         <div class="num">2026</div>
         <div class="lbl">FOUNDING YEAR</div>
@@ -95,75 +114,81 @@
     <div class="home-about-text">
       <p class="section-eyebrow" style="text-align:left">Our Heritage</p>
       <h2 class="section-title" style="text-align:left">Two Port Cities.<br><span class="em">One School.</span></h2>
-      <p>The name Silvertown carries a story unlike any other — a district in East London's Royal Docks that once connected the world through the first transatlantic telegraph cables. Like Silvertown, Mombasa is a historic port city built on trade, connection, and resilience.</p>
-      <p style="margin-top:15px">One vision unites them: a world-class school that connects the local to the global.</p>
-      <a href="heritage.html" class="btn-navy" style="margin-top:25px; display:inline-block">Discover Our Heritage →</a>
+      <p>The name Silvertown carries a story unlike any other — a district in East London's Royal Docks that once connected the world through the first transatlantic telegraph cables.</p>
+      <p>Like Silvertown, Mombasa is a historic port city built on trade, connection, and resilience. One vision unites them: a world-class school that connects the local to the global.</p>
+      <a href="heritage.html" class="btn-navy" style="margin-top:22px">Discover Our Heritage →</a>
     </div>
   </div>
 </section>
 
-<!-- FIX 3: SCHOOL HOUSES — navy background so text is visible -->
+<!-- SCHOOL HOUSES -->
 <section class="houses-home">
   <p class="section-eyebrow">School Houses</p>
   <h2 class="section-title" style="color:white">The Four <span class="em">Houses</span></h2>
-  <p class="section-subtitle">Named after the pioneers of Silvertown, East London.</p>
+  <p class="section-subtitle" style="color:rgba(255,255,255,0.5)">Named after the pioneers of Silvertown, East London — each carrying a legacy of industry, excellence, and resilience.</p>
   <div class="houses-home-grid">
-    <div class="house-home-card">
-      <div class="house-initial">S</div>
-      <h3>Silver House</h3>
-      <p>Vision, entrepreneurship, the courage to build from nothing.</p>
-    </div>
-    <div class="house-home-card">
-      <div class="house-initial">T</div>
-      <h3>Tate House</h3>
-      <p>Excellence, culture, and giving back to society.</p>
-    </div>
-    <div class="house-home-card">
-      <div class="house-initial">L</div>
-      <h3>Lyle House</h3>
-      <p>Determination, industry, relentless pursuit of quality.</p>
-    </div>
-    <div class="house-home-card">
-      <div class="house-initial">B</div>
-      <h3>Brunner House</h3>
-      <p>Innovation, discovery, and scientific thinking.</p>
-    </div>
+    <div class="house-home-card"><div class="house-initial">S</div><h3>Silver House</h3><p>Vision, entrepreneurship, the courage to build from nothing.</p></div>
+    <div class="house-home-card"><div class="house-initial">T</div><h3>Tate House</h3><p>Excellence, culture, and giving back to society.</p></div>
+    <div class="house-home-card"><div class="house-initial">L</div><h3>Lyle House</h3><p>Determination, industry, relentless pursuit of quality.</p></div>
+    <div class="house-home-card"><div class="house-initial">B</div><h3>Brunner House</h3><p>Innovation, discovery, and scientific thinking.</p></div>
   </div>
-  <div style="text-align:center; margin-top:40px">
-    <a href="school.html" class="btn-gold">Learn More About Our School</a>
-  </div>
+  <div style="text-align:center;margin-top:38px"><a href="school.html" class="btn-gold">Learn More About Our School</a></div>
 </section>
 
-<!-- STUDENT LIFE — FIX 5: student photos -->
+<!-- STUDENT LIFE PHOTOS -->
 <section class="student-life">
   <p class="section-eyebrow">Student Life</p>
   <h2 class="section-title">The <span class="em">Silvertown Experience</span></h2>
   <div class="divider"><div class="divider-diamond"></div></div>
   <div class="photos-grid">
     <div class="photo-item photo-large">
-      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80" alt="Students in classroom" />
+      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=900&q=80" alt="Students in classroom" />
       <div class="photo-caption">Academic Excellence</div>
     </div>
     <div class="photo-item">
-      <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="School building" />
-      <div class="photo-caption">World-Class Facilities</div>
+      <img src="https://images.unsplash.com/photo-1532094349884-543559241b3e?w=600&q=80" alt="Science lab" />
+      <div class="photo-caption">Science & Innovation</div>
     </div>
     <div class="photo-item">
       <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80" alt="Students studying" />
       <div class="photo-caption">Collaborative Learning</div>
     </div>
     <div class="photo-item">
-      <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&q=80" alt="Students together" />
-      <div class="photo-caption">Global Community</div>
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Sports" />
+      <div class="photo-caption">Sport & Wellbeing</div>
     </div>
     <div class="photo-item">
-      <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80" alt="Classroom learning" />
-      <div class="photo-caption">Cambridge Curriculum</div>
+      <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=600&q=80" alt="Art class" />
+      <div class="photo-caption">Arts & Creativity</div>
     </div>
   </div>
 </section>
 
-<!-- CTA BANNER -->
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <p class="section-eyebrow">Community Voices</p>
+  <h2 class="section-title">What People Are <span class="em">Saying</span></h2>
+  <div class="divider"><div class="divider-diamond"></div></div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-text">"As a Kenyan parent living in the UK, I've dreamed of a school back home that meets international standards. Silvertown International School is exactly what our community has been waiting for."</p>
+      <div class="testimonial-author">Kenyan Parent, London</div>
+      <div class="testimonial-role">Prospective Founding Family</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">"The vision behind this school — rooted in history, connected to the world — is unlike anything I've seen in Kenyan education. Mombasa deserves this."</p>
+      <div class="testimonial-author">Education Professional, Nairobi</div>
+      <div class="testimonial-role">Community Supporter</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">"The Silvertown brand story is extraordinary. A school that connects East London's industrial heritage to Kenya's coastal city — this is something special."</p>
+      <div class="testimonial-author">Diaspora Community Member</div>
+      <div class="testimonial-role">Early Supporter</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="cta-banner">
   <div class="cta-inner">
     <h2>"To inspire a generation of <em>Silvertowners</em> who are globally connected, academically refined, and unshakably resilient."</h2>
@@ -171,7 +196,6 @@
   </div>
 </section>
 
-<!-- FIX 4: footer logo larger -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -179,32 +203,79 @@
       <div class="f-name">SILVERTOWN INTERNATIONAL SCHOOL</div>
       <div class="f-loc">MOMBASA · KENYA · EST. 2031</div>
       <div class="f-motto">"Connecting Minds, Bridging Worlds"</div>
+      <div class="footer-socials">
+        <a href="https://instagram.com/SilvertownIntlSchool" class="footer-social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@SilvertownIntlSchool" class="footer-social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://linkedin.com/company/silvertown-international-school" class="footer-social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/SilvertownISK" class="footer-social-icon" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://facebook.com/SilvertownIntlSchool" class="footer-social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      </div>
+      <div class="footer-newsletter">
+        <p>Subscribe for school updates</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
     </div>
     <div class="footer-col">
       <h5>Navigate</h5>
       <ul>
         <li><a href="heritage.html">Our Heritage</a></li>
         <li><a href="school.html">Our School</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="news.html">News & Events</a></li>
+        <li><a href="parents.html">Parents</a></li>
         <li><a href="journey.html">The Journey</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Follow Us</h5>
+      <h5>Contact</h5>
       <ul>
-        <li><a href="https://instagram.com/SilvertownIntlSchool" target="_blank">Instagram</a></li>
-        <li><a href="https://tiktok.com/@SilvertownIntlSchool" target="_blank">TikTok</a></li>
-        <li><a href="https://linkedin.com/company/silvertown-international-school" target="_blank">LinkedIn</a></li>
-        <li><a href="https://twitter.com/SilvertownISK" target="_blank">X (Twitter)</a></li>
-        <li><a href="https://facebook.com/SilvertownIntlSchool" target="_blank">Facebook</a></li>
+        <li><a href="mailto:info@silvertowninternational.ac.ke">info@silvertowninternational.ac.ke</a></li>
+        <li><a href="contact.html">Send a Message</a></li>
+        <li><a href="contact.html">Register Interest</a></li>
+      </ul>
+      <h5 style="margin-top:25px">Legal</h5>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Safeguarding</a></li>
+        <li><a href="#">Data Protection</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Silvertown International School · All Rights Reserved</p>
+    <p>© 2026 Silvertown International School · All Rights Reserved · Mombasa, Kenya</p>
     <p class="footer-hash">#SilvertownISK</p>
   </div>
 </footer>
 
+<!-- Floating buttons -->
+<a href="https://wa.me/" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="#home" class="back-to-top" id="backToTop" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+
+<script>
+// Back to top
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('backToTop');
+  if (window.scrollY > 400) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+// Mobile nav toggle
+function toggleMobileNav() {
+  const links = document.querySelector('.nav-links');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  if (links.style.display === 'flex') {
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '70px';
+    links.style.left = '0'; links.style.right = '0';
+    links.style.background = 'rgba(10,31,68,0.98)';
+    links.style.padding = '20px 0';
+    links.style.zIndex = '999';
+  }
+}
+</script>
 </body>
 </html>
