@@ -57,8 +57,22 @@ nav {
   letter-spacing: 1px;
 }
 
+.nav-logo-img {
+  width: 46px; height: 46px;
+  object-fit: cover; border-radius: 50%;
+  border: 2px solid var(--gold);
+}
+
 .nav-logo-text .name { color: var(--white); font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; }
 .nav-logo-text .loc { color: var(--gold); font-size: 0.65rem; letter-spacing: 3px; }
+
+.hero-logo {
+  width: 130px; height: 130px;
+  object-fit: cover; border-radius: 50%;
+  border: 3px solid rgba(212,175,55,0.5);
+  margin-bottom: 25px;
+  box-shadow: 0 0 40px rgba(212,175,55,0.2);
+}
 
 .nav-links { display: flex; list-style: none; gap: 2.5rem; }
 .nav-links a {
