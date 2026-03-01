@@ -102,8 +102,10 @@
   </div>
   <canvas id="particles-canvas"></canvas>
 <div class="hero-overlay"></div>
+  <div class="hero-logo-watermark"><img src="logo.jpg" alt="" /></div>
   <div class="hero-content">
-      <div class="hero-badge">FOUNDING PHASE · EST. 2031</div>
+    <img src="logo.jpg" alt="Silvertown International School" class="hero-logo" />
+    <div class="hero-badge">FOUNDING PHASE · EST. 2031</div>
     <h1>SILVERTOWN<br><span class="highlight">INTERNATIONAL SCHOOL</span></h1>
     <p class="hero-location">📍 MOMBASA, KENYA</p>
     <div class="hero-line">
@@ -160,45 +162,11 @@
 ══════════════════════════════════ -->
 <section class="home-about">
   <div class="home-about-grid">
-    <div class="home-about-panel reveal reveal-zoom">
-      <div class="panel-top">
-        <div class="panel-stat-row">
-          <div class="panel-stat">
-            <div class="panel-stat-num">2031</div>
-            <div class="panel-stat-lbl">TARGET OPENING</div>
-          </div>
-          <div class="panel-divider"></div>
-          <div class="panel-stat">
-            <div class="panel-stat-num">Y7–11</div>
-            <div class="panel-stat-lbl">YEAR GROUPS</div>
-          </div>
-          <div class="panel-divider"></div>
-          <div class="panel-stat">
-            <div class="panel-stat-num">4</div>
-            <div class="panel-stat-lbl">SCHOOL HOUSES</div>
-          </div>
-        </div>
-      </div>
-      <div class="panel-quote">
-        <span class="panel-quote-mark">"</span>
-        <p>Education as refinement — turning raw potential into lasting achievement, just as Silvertown once refined raw materials into the cables that connected the world.</p>
-        <span class="panel-quote-source">— SIS Vision Statement</span>
-      </div>
-      <div class="panel-cities">
-        <div class="panel-city">
-          <span class="panel-city-flag">🇬🇧</span>
-          <span class="panel-city-name">Silvertown, London</span>
-        </div>
-        <div class="panel-city-connector">⟷</div>
-        <div class="panel-city">
-          <span class="panel-city-flag">🇰🇪</span>
-          <span class="panel-city-name">Mombasa, Kenya</span>
-        </div>
-      </div>
-      <div class="panel-curriculum">
-        <span class="panel-curriculum-tag">Cambridge IGCSE</span>
-        <span class="panel-curriculum-tag">Cambridge Lower Secondary</span>
-        <span class="panel-curriculum-tag">Est. 2026</span>
+    <div class="home-about-img-wrap reveal reveal-zoom">
+      <img src="logo.jpg" alt="SIS" class="home-about-img" />
+      <div class="founding-badge">
+        <div class="num">2026</div>
+        <div class="lbl">FOUNDING YEAR</div>
       </div>
     </div>
     <div class="home-about-text reveal-right">
