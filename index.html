@@ -10,7 +10,55 @@
 </head>
 <body>
 
-<nav>
+<!-- ══════════════════════════════════
+     PRELOADER
+══════════════════════════════════ -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-ring"></div>
+    <img src="logo.jpg" alt="SIS" class="preloader-logo" />
+    <div class="preloader-text">
+      <span class="preloader-name">SILVERTOWN</span>
+      <span class="preloader-sub">INTERNATIONAL SCHOOL</span>
+    </div>
+    <div class="preloader-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     MOBILE NAV DRAWER
+══════════════════════════════════ -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header">
+    <img src="logo.jpg" alt="SIS" class="drawer-logo" />
+    <div class="drawer-logo-text">
+      <span>SILVERTOWN</span>
+      <span>INTERNATIONAL SCHOOL</span>
+    </div>
+    <button class="drawer-close" onclick="closeMobileNav()">✕</button>
+  </div>
+  <nav class="drawer-nav">
+    <div class="drawer-section">About</div>
+    <a href="heritage.html" class="drawer-link">Our Heritage</a>
+    <a href="journey.html" class="drawer-link">The Journey</a>
+    <div class="drawer-section">School Life</div>
+    <a href="school.html" class="drawer-link">Our School</a>
+    <a href="sports.html" class="drawer-link">Sports</a>
+    <a href="news.html" class="drawer-link">News &amp; Events</a>
+    <div class="drawer-section">Connect</div>
+    <a href="parents.html" class="drawer-link">Parents</a>
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </nav>
+  <a href="contact.html" class="drawer-cta">Get In Touch</a>
+</div>
+
+<!-- ══════════════════════════════════
+     NAVIGATION
+══════════════════════════════════ -->
+<nav id="mainNav">
   <a href="index.html" class="nav-logo">
     <img src="logo.jpg" alt="SIS Logo" class="nav-logo-img" />
     <div class="nav-logo-text">
@@ -29,69 +77,77 @@
       <div class="dropdown-menu">
         <a href="school.html">Our School</a>
         <a href="sports.html">Sports</a>
-        <a href="news.html">News & Events</a>
+        <a href="news.html">News &amp; Events</a>
       </div>
     </li>
     <li><a href="parents.html">Parents</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <a href="contact.html" class="nav-cta">Get In Touch</a>
-  <div class="nav-hamburger" onclick="toggleMobileNav()">
+  <div class="nav-hamburger" id="hamburger" onclick="openMobileNav()">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
-<!-- HERO — animated slideshow -->
+<!-- ══════════════════════════════════
+     HERO — animated slideshow
+══════════════════════════════════ -->
 <section class="hero" id="home">
+  <canvas id="particleCanvas"></canvas>
   <div class="hero-slides">
     <div class="hero-slide"></div>
     <div class="hero-slide"></div>
     <div class="hero-slide"></div>
     <div class="hero-slide"></div>
   </div>
-  <div class="hero-overlay"></div>
+  <canvas id="particles-canvas"></canvas>
+<div class="hero-overlay"></div>
   <div class="hero-logo-watermark"><img src="logo.jpg" alt="" /></div>
   <div class="hero-content">
     <img src="logo.jpg" alt="Silvertown International School" class="hero-logo" />
     <div class="hero-badge">FOUNDING PHASE · EST. 2031</div>
     <h1>SILVERTOWN<br><span class="highlight">INTERNATIONAL SCHOOL</span></h1>
     <p class="hero-location">📍 MOMBASA, KENYA</p>
-    <div class="hero-line"><span class="hero-motto">"Connecting Minds, Bridging Worlds"</span></div>
+    <div class="hero-line">
+      <span class="hero-motto">"Connecting Minds, Bridging Worlds"</span>
+    </div>
     <p class="hero-desc">A world-class Cambridge IGCSE school in the making — built for Kenyan families, the global diaspora, and international families who believe education should know no borders.</p>
     <div class="hero-cta">
       <a href="journey.html" class="btn-gold">Follow Our Journey</a>
       <a href="contact.html" class="btn-ghost">Get In Touch</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">2031</div><div class="stat-label">TARGET OPENING</div></div>
+      <div class="stat"><div class="stat-num counter" data-target="2031" data-suffix="">2031</div><div class="stat-label">TARGET OPENING</div></div>
       <div class="stat"><div class="stat-num">Y7–11</div><div class="stat-label">YEAR GROUPS</div></div>
       <div class="stat"><div class="stat-num">IGCSE</div><div class="stat-label">CAMBRIDGE</div></div>
-      <div class="stat"><div class="stat-num">4</div><div class="stat-label">SCHOOL HOUSES</div></div>
+      <div class="stat"><div class="stat-num counter" data-target="4" data-suffix="">4</div><div class="stat-label">SCHOOL HOUSES</div></div>
     </div>
   </div>
 </section>
 
-<!-- PILLARS -->
-<section class="pillars">
-  <p class="section-eyebrow">Our Foundation</p>
-  <h2 class="section-title">Built on <span class="em">Three Pillars</span></h2>
-  <div class="divider"><div class="divider-diamond"></div></div>
-  <div class="pillars-grid">
-    <div class="pillar-card">
+<!-- ══════════════════════════════════
+     PILLARS
+══════════════════════════════════ -->
+<section class="pillars section-diagonal-top">
+  <p class="section-eyebrow reveal reveal-left">Our Foundation</p>
+  <h2 class="section-title reveal reveal-left">Built on <span class="em">Three Pillars</span></h2>
+  <div class="divider reveal"><div class="divider-diamond"></div></div>
+  <div class="pillars-grid reveal">
+    <div class="pillar-card shimmer-card reveal reveal-up" style="--delay:0ms">
       <span class="pillar-number">01</span>
       <div class="pillar-icon">🌐</div>
       <h3>Global Connectivity</h3>
       <p>Named after Silvertown, East London — where the world's first transatlantic telegraph cables were made. Our school bridges students to international communities and futures.</p>
       <a href="heritage.html" class="pillar-link">Read the Story →</a>
     </div>
-    <div class="pillar-card">
+    <div class="pillar-card shimmer-card reveal reveal-up" style="--delay:120ms">
       <span class="pillar-number">02</span>
       <div class="pillar-icon">⭐</div>
       <h3>Academic Refinement</h3>
       <p>Just as Silvertown refined raw materials into excellence, we take the potential of every student and — through a rigorous Cambridge curriculum — refine it into lasting achievement.</p>
       <a href="school.html" class="pillar-link">Our Curriculum →</a>
     </div>
-    <div class="pillar-card">
+    <div class="pillar-card shimmer-card reveal reveal-up" style="--delay:240ms">
       <span class="pillar-number">03</span>
       <div class="pillar-icon">🔥</div>
       <h3>The Silvertown Spirit</h3>
@@ -101,86 +157,94 @@
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ══════════════════════════════════
+     ABOUT
+══════════════════════════════════ -->
 <section class="home-about">
   <div class="home-about-grid">
-    <div class="home-about-img-wrap">
+    <div class="home-about-img-wrap reveal reveal-zoom">
       <img src="logo.jpg" alt="SIS" class="home-about-img" />
       <div class="founding-badge">
         <div class="num">2026</div>
         <div class="lbl">FOUNDING YEAR</div>
       </div>
     </div>
-    <div class="home-about-text">
-      <p class="section-eyebrow" style="text-align:left">Our Heritage</p>
-      <h2 class="section-title" style="text-align:left">Two Port Cities.<br><span class="em">One School.</span></h2>
-      <p>The name Silvertown carries a story unlike any other — a district in East London's Royal Docks that once connected the world through the first transatlantic telegraph cables.</p>
-      <p>Like Silvertown, Mombasa is a historic port city built on trade, connection, and resilience. One vision unites them: a world-class school that connects the local to the global.</p>
-      <a href="heritage.html" class="btn-navy" style="margin-top:22px">Discover Our Heritage →</a>
+    <div class="home-about-text reveal-right">
+      <p class="section-eyebrow reveal reveal-left" style="text-align:left">Our Heritage</p>
+      <h2 class="section-title reveal reveal-left" style="text-align:left">Two Port Cities.<br><span class="em">One School.</span></h2>
+      <p class="reveal reveal-up">The name Silvertown carries a story unlike any other — a district in East London's Royal Docks that once connected the world through the first transatlantic telegraph cables.</p>
+      <p class="reveal reveal-up" style="--delay:80ms">Like Silvertown, Mombasa is a historic port city built on trade, connection, and resilience. One vision unites them: a world-class school that connects the local to the global.</p>
+      <a href="heritage.html" class="btn-navy reveal reveal-up" style="margin-top:22px;--delay:160ms">Discover Our Heritage →</a>
     </div>
   </div>
 </section>
 
-<!-- SCHOOL HOUSES -->
-<section class="houses-home">
-  <p class="section-eyebrow">School Houses</p>
-  <h2 class="section-title" style="color:white">The Four <span class="em">Houses</span></h2>
-  <p class="section-subtitle" style="color:rgba(255,255,255,0.5)">Named after the pioneers of Silvertown, East London — each carrying a legacy of industry, excellence, and resilience.</p>
+<!-- ══════════════════════════════════
+     SCHOOL HOUSES
+══════════════════════════════════ -->
+<section class="houses-home section-diagonal-top-dark">
+  <p class="section-eyebrow reveal reveal-left">School Houses</p>
+  <h2 class="section-title reveal reveal-left" style="color:white">The Four <span class="em">Houses</span></h2>
+  <p class="section-subtitle reveal" style="color:rgba(255,255,255,0.5)">Named after the pioneers of Silvertown, East London — each carrying a legacy of industry, excellence, and resilience.</p>
   <div class="houses-home-grid">
-    <div class="house-home-card"><div class="house-initial">S</div><h3>Silver House</h3><p>Vision, entrepreneurship, the courage to build from nothing.</p></div>
-    <div class="house-home-card"><div class="house-initial">T</div><h3>Tate House</h3><p>Excellence, culture, and giving back to society.</p></div>
-    <div class="house-home-card"><div class="house-initial">L</div><h3>Lyle House</h3><p>Determination, industry, relentless pursuit of quality.</p></div>
-    <div class="house-home-card"><div class="house-initial">B</div><h3>Brunner House</h3><p>Innovation, discovery, and scientific thinking.</p></div>
+    <div class="house-home-card shimmer-card reveal reveal-up" style="--delay:0ms"><div class="house-initial">S</div><h3>Silver House</h3><p>Vision, entrepreneurship, the courage to build from nothing.</p></div>
+    <div class="house-home-card shimmer-card reveal reveal-up" style="--delay:100ms"><div class="house-initial">T</div><h3>Tate House</h3><p>Excellence, culture, and giving back to society.</p></div>
+    <div class="house-home-card shimmer-card reveal reveal-up" style="--delay:200ms"><div class="house-initial">L</div><h3>Lyle House</h3><p>Determination, industry, relentless pursuit of quality.</p></div>
+    <div class="house-home-card shimmer-card reveal reveal-up" style="--delay:300ms"><div class="house-initial">B</div><h3>Brunner House</h3><p>Innovation, discovery, and scientific thinking.</p></div>
   </div>
-  <div style="text-align:center;margin-top:38px"><a href="school.html" class="btn-gold">Learn More About Our School</a></div>
+  <div style="text-align:center;margin-top:38px" class="reveal reveal-up" style="--delay:400ms"><a href="school.html" class="btn-gold">Learn More About Our School</a></div>
 </section>
 
-<!-- STUDENT LIFE PHOTOS -->
+<!-- ══════════════════════════════════
+     STUDENT LIFE PHOTOS
+══════════════════════════════════ -->
 <section class="student-life">
-  <p class="section-eyebrow">Student Life</p>
-  <h2 class="section-title">The <span class="em">Silvertown Experience</span></h2>
-  <div class="divider"><div class="divider-diamond"></div></div>
+  <p class="section-eyebrow reveal reveal-left">Student Life</p>
+  <h2 class="section-title reveal reveal-left">The <span class="em">Silvertown Experience</span></h2>
+  <div class="divider reveal"><div class="divider-diamond"></div></div>
   <div class="photos-grid">
-    <div class="photo-item photo-large">
+    <div class="photo-item photo-large reveal reveal-zoom" style="--delay:0ms">
       <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=900&q=80" alt="Students in classroom" />
       <div class="photo-caption">Academic Excellence</div>
     </div>
-    <div class="photo-item">
+    <div class="photo-item reveal reveal-zoom" style="--delay:80ms">
       <img src="https://images.unsplash.com/photo-1532094349884-543559241b3e?w=600&q=80" alt="Science lab" />
-      <div class="photo-caption">Science & Innovation</div>
+      <div class="photo-caption">Science &amp; Innovation</div>
     </div>
-    <div class="photo-item">
+    <div class="photo-item reveal reveal-zoom" style="--delay:160ms">
       <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80" alt="Students studying" />
       <div class="photo-caption">Collaborative Learning</div>
     </div>
-    <div class="photo-item">
+    <div class="photo-item reveal reveal-zoom" style="--delay:240ms">
       <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Sports" />
-      <div class="photo-caption">Sport & Wellbeing</div>
+      <div class="photo-caption">Sport &amp; Wellbeing</div>
     </div>
-    <div class="photo-item">
+    <div class="photo-item reveal reveal-zoom" style="--delay:320ms">
       <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=600&q=80" alt="Art class" />
-      <div class="photo-caption">Arts & Creativity</div>
+      <div class="photo-caption">Arts &amp; Creativity</div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- ══════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════ -->
 <section class="testimonials">
-  <p class="section-eyebrow">Community Voices</p>
-  <h2 class="section-title">What People Are <span class="em">Saying</span></h2>
-  <div class="divider"><div class="divider-diamond"></div></div>
+  <p class="section-eyebrow reveal reveal-left">Community Voices</p>
+  <h2 class="section-title reveal reveal-left">What People Are <span class="em">Saying</span></h2>
+  <div class="divider reveal"><div class="divider-diamond"></div></div>
   <div class="testimonials-grid">
-    <div class="testimonial-card">
+    <div class="testimonial-card reveal reveal-up" style="--delay:0ms">
       <p class="testimonial-text">"As a Kenyan parent living in the UK, I've dreamed of a school back home that meets international standards. Silvertown International School is exactly what our community has been waiting for."</p>
       <div class="testimonial-author">Kenyan Parent, London</div>
       <div class="testimonial-role">Prospective Founding Family</div>
     </div>
-    <div class="testimonial-card">
+    <div class="testimonial-card reveal reveal-up" style="--delay:120ms">
       <p class="testimonial-text">"The vision behind this school — rooted in history, connected to the world — is unlike anything I've seen in Kenyan education. Mombasa deserves this."</p>
       <div class="testimonial-author">Education Professional, Nairobi</div>
       <div class="testimonial-role">Community Supporter</div>
     </div>
-    <div class="testimonial-card">
+    <div class="testimonial-card reveal reveal-up" style="--delay:240ms">
       <p class="testimonial-text">"The Silvertown brand story is extraordinary. A school that connects East London's industrial heritage to Kenya's coastal city — this is something special."</p>
       <div class="testimonial-author">Diaspora Community Member</div>
       <div class="testimonial-role">Early Supporter</div>
@@ -188,9 +252,11 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ══════════════════════════════════
+     CTA
+══════════════════════════════════ -->
 <section class="cta-banner">
-  <div class="cta-inner">
+  <div class="cta-inner reveal reveal-up">
     <h2>"To inspire a generation of <em>Silvertowners</em> who are globally connected, academically refined, and unshakably resilient."</h2>
     <a href="contact.html" class="btn-gold">Join the Journey</a>
   </div>
@@ -224,7 +290,7 @@
         <li><a href="heritage.html">Our Heritage</a></li>
         <li><a href="school.html">Our School</a></li>
         <li><a href="sports.html">Sports</a></li>
-        <li><a href="news.html">News & Events</a></li>
+        <li><a href="news.html">News &amp; Events</a></li>
         <li><a href="parents.html">Parents</a></li>
         <li><a href="journey.html">The Journey</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -256,26 +322,178 @@
 <a href="#home" class="back-to-top" id="backToTop" title="Back to top"><i class="fas fa-chevron-up"></i></a>
 
 <script>
-// Back to top
+/* ══════════════════════════════════════
+   PRELOADER
+══════════════════════════════════════ */
+(function() {
+  const preloader = document.getElementById('preloader');
+  const hide = () => {
+    preloader.classList.add('fade-out');
+    setTimeout(() => { preloader.style.display = 'none'; }, 600);
+  };
+  if (document.readyState === 'complete') {
+    setTimeout(hide, 500);
+  } else {
+    window.addEventListener('load', () => setTimeout(hide, 500));
+    // Safety: hide after 2s regardless
+    setTimeout(hide, 2000);
+  }
+})();
+
+/* ══════════════════════════════════════
+   MOBILE DRAWER NAV
+══════════════════════════════════════ */
+function openMobileNav() {
+  document.getElementById('navDrawer').classList.add('open');
+  document.getElementById('navOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  document.getElementById('navDrawer').classList.remove('open');
+  document.getElementById('navOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ══════════════════════════════════════
+   GLASSMORPHISM NAV ON SCROLL
+══════════════════════════════════════ */
+const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+
+  // Back to top
   const btn = document.getElementById('backToTop');
   if (window.scrollY > 400) btn.classList.add('visible');
   else btn.classList.remove('visible');
 });
-// Mobile nav toggle
-function toggleMobileNav() {
-  const links = document.querySelector('.nav-links');
-  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
-  if (links.style.display === 'flex') {
-    links.style.flexDirection = 'column';
-    links.style.position = 'absolute';
-    links.style.top = '70px';
-    links.style.left = '0'; links.style.right = '0';
-    links.style.background = 'rgba(10,31,68,0.98)';
-    links.style.padding = '20px 0';
-    links.style.zIndex = '999';
+
+/* ══════════════════════════════════════
+   PARALLAX HERO
+══════════════════════════════════════ */
+const heroSlides = document.querySelector('.hero-slides');
+const heroWatermark = document.querySelector('.hero-logo-watermark');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < window.innerHeight) {
+    if (heroSlides) heroSlides.style.transform = `translateY(${y * 0.35}px)`;
+    if (heroWatermark) heroWatermark.style.transform = `translate(-50%, calc(-50% + ${y * 0.2}px))`;
   }
-}
+}, { passive: true });
+
+/* ══════════════════════════════════════
+   FLOATING PARTICLES (canvas)
+══════════════════════════════════════ */
+(function() {
+  const canvas = document.getElementById('particleCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  const count = 55;
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
+  function Particle() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.r = Math.random() * 2.2 + 0.4;
+    this.alpha = Math.random() * 0.35 + 0.05;
+    this.speed = Math.random() * 0.35 + 0.08;
+    this.drift = (Math.random() - 0.5) * 0.3;
+    this.pulse = Math.random() * Math.PI * 2;
+    this.pulseSpeed = Math.random() * 0.015 + 0.005;
+  }
+
+  function init() {
+    resize();
+    particles = [];
+    for (let i = 0; i < count; i++) particles.push(new Particle());
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.pulse += p.pulseSpeed;
+      const a = p.alpha * (0.6 + 0.4 * Math.sin(p.pulse));
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(212,175,55,${a})`;
+      ctx.fill();
+      p.y -= p.speed;
+      p.x += p.drift;
+      if (p.y < -5) { p.y = canvas.height + 5; p.x = Math.random() * canvas.width; }
+      if (p.x < -5 || p.x > canvas.width + 5) p.x = Math.random() * canvas.width;
+    });
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', init, { passive: true });
+  init();
+  draw();
+})();
+
+/* ══════════════════════════════════════
+   SCROLL REVEAL (Intersection Observer)
+══════════════════════════════════════ */
+(function() {
+  const revealEls = document.querySelectorAll('.reveal');
+  if (!revealEls.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = el.style.getPropertyValue('--delay') || '0ms';
+        setTimeout(() => {
+          el.classList.add('revealed');
+        }, parseInt(delay) || 0);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => observer.observe(el));
+})();
+
+/* ══════════════════════════════════════
+   ANIMATED NUMBER COUNTERS
+══════════════════════════════════════ */
+(function() {
+  const counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const start = performance.now();
+      const startVal = target > 100 ? target - 80 : 0;
+
+      function animate(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(startVal + (target - startVal) * ease);
+        el.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(animate);
+        else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(animate);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(el => observer.observe(el));
+})();
 </script>
 </body>
 </html>

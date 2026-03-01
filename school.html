@@ -6,6 +6,96 @@
   <title>Our School | Silvertown International School</title>
   <meta name="description" content="Cambridge IGCSE secondary school coming to Mombasa, Kenya. Year 7–11, with A-Level expansion. Globally connected education.">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Cambridge IGCSE CSS Badge/Seal */
+    .cambridge-seal-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0 10px;
+    }
+    .cambridge-seal {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .cambridge-seal::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0A1F44 0%, #1a3566 100%);
+      box-shadow: 0 0 0 4px #D4AF37, 0 0 0 8px #0A1F44, 0 0 0 12px #D4AF37, 0 6px 30px rgba(10,31,68,0.35);
+    }
+    .cambridge-seal::after {
+      content: '★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      font-size: 7px;
+      color: #D4AF37;
+      letter-spacing: 3px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 10px;
+      box-sizing: border-box;
+      opacity: 0.6;
+    }
+    .cambridge-seal-inner {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+    .cambridge-seal-inner .seal-top {
+      font-size: 0.55rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #D4AF37;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .cambridge-seal-inner .seal-main {
+      font-size: 1.1rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.1;
+      color: white;
+      display: block;
+    }
+    .cambridge-seal-inner .seal-sub {
+      font-size: 0.6rem;
+      letter-spacing: 1.5px;
+      color: #C0C0C0;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 4px;
+    }
+    .cambridge-seal-inner .seal-check {
+      font-size: 1.4rem;
+      color: #D4AF37;
+      display: block;
+      margin-top: 6px;
+    }
+  </style>
 </head>
 <body>
 
@@ -38,19 +128,19 @@
 <!-- OVERVIEW STATS -->
 <section class="school-stats">
   <div class="stats-grid">
-    <div class="stat-block">
+    <div class="stat-block reveal">
       <div class="stat-big">Cambridge</div>
       <div class="stat-desc">IGCSE Curriculum</div>
     </div>
-    <div class="stat-block">
+    <div class="stat-block reveal">
       <div class="stat-big">Y7–11</div>
       <div class="stat-desc">Secondary School</div>
     </div>
-    <div class="stat-block">
+    <div class="stat-block reveal">
       <div class="stat-big">Mombasa</div>
       <div class="stat-desc">Kenya, East Africa</div>
     </div>
-    <div class="stat-block">
+    <div class="stat-block reveal">
       <div class="stat-big">2031</div>
       <div class="stat-desc">Target Opening</div>
     </div>
@@ -59,10 +149,23 @@
 
 <!-- CURRICULUM -->
 <section>
-  <p class="section-eyebrow">Curriculum</p>
-  <h2 class="section-title">Cambridge <span class="em">IGCSE</span></h2>
-  <div class="divider"><div class="divider-diamond"></div></div>
-  <div class="curriculum-grid">
+  <p class="section-eyebrow reveal">Curriculum</p>
+  <h2 class="section-title reveal">Cambridge <span class="em">IGCSE</span></h2>
+  <div class="divider reveal"><div class="divider-diamond"></div></div>
+
+  <!-- Cambridge IGCSE CSS Seal -->
+  <div class="cambridge-seal-wrap reveal">
+    <div class="cambridge-seal">
+      <div class="cambridge-seal-inner">
+        <span class="seal-top">Accredited</span>
+        <span class="seal-main">Cambridge<br>IGCSE</span>
+        <span class="seal-sub">International · Education</span>
+        <span class="seal-check">✓</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="curriculum-grid reveal">
     <div class="curriculum-text">
       <p class="body-text">Silvertown International School will follow the <strong>Cambridge Assessment International Education (CAIE)</strong> framework — one of the most respected and globally recognised curricula in the world.</p>
       <p class="body-text">Cambridge IGCSE is already established in Kenya and is widely accepted by universities across the UK, USA, Europe, and beyond. It offers rigorous academic standards while developing critical thinking, independent learning, and global awareness.</p>
@@ -102,26 +205,26 @@
 
 <!-- SCHOOL HOUSES -->
 <section style="background:var(--navy)">
-  <p class="section-eyebrow">School Houses</p>
-  <h2 class="section-title" style="color:white">The Four <span class="em">Houses</span></h2>
-  <p class="section-subtitle">Named after the pioneers of Silvertown, East London — each house carries a legacy of innovation, industry, and resilience.</p>
+  <p class="section-eyebrow reveal">School Houses</p>
+  <h2 class="section-title reveal" style="color:white">The Four <span class="em">Houses</span></h2>
+  <p class="section-subtitle reveal">Named after the pioneers of Silvertown, East London — each house carries a legacy of innovation, industry, and resilience.</p>
   <div class="houses-grid">
-    <div class="house-card silver">
+    <div class="house-card silver reveal">
       <div class="house-initial">S</div>
       <h3>Silver House</h3>
       <p>Named after <strong>Samuel Winkworth Silver</strong> — the founder of Silvertown itself. Representing vision, entrepreneurship, and the courage to build something from nothing.</p>
     </div>
-    <div class="house-card tate">
+    <div class="house-card tate reveal">
       <div class="house-initial">T</div>
       <h3>Tate House</h3>
       <p>Named after <strong>Henry Tate</strong> — sugar refiner and philanthropist who founded the Tate Gallery. Representing excellence, culture, and giving back to society.</p>
     </div>
-    <div class="house-card lyle">
+    <div class="house-card lyle reveal">
       <div class="house-initial">L</div>
       <h3>Lyle House</h3>
       <p>Named after <strong>Abram Lyle</strong> — co-founder of Tate & Lyle. Representing determination, industry, and the relentless pursuit of quality.</p>
     </div>
-    <div class="house-card brunner">
+    <div class="house-card brunner reveal">
       <div class="house-initial">B</div>
       <h3>Brunner House</h3>
       <p>Named after the <strong>Brunner Mond</strong> chemical works — pioneers of industrial science. Representing innovation, discovery, and scientific thinking.</p>
@@ -131,26 +234,26 @@
 
 <!-- VALUES -->
 <section style="background:var(--off-white)">
-  <p class="section-eyebrow">What We Stand For</p>
-  <h2 class="section-title">The <span class="em">Silvertown Spirit</span></h2>
-  <div class="divider"><div class="divider-diamond"></div></div>
+  <p class="section-eyebrow reveal">What We Stand For</p>
+  <h2 class="section-title reveal">The <span class="em">Silvertown Spirit</span></h2>
+  <div class="divider reveal"><div class="divider-diamond"></div></div>
   <div class="values-grid">
-    <div class="value-card">
+    <div class="value-card reveal">
       <div class="value-icon-wrap">🧭</div>
       <h4>Adaptability</h4>
       <p>The ability to thrive in a changing world — at home in any country, any culture, any challenge.</p>
     </div>
-    <div class="value-card">
+    <div class="value-card reveal">
       <div class="value-icon-wrap">💡</div>
       <h4>Innovation</h4>
       <p>The courage to build something where nothing existed before. To question, create, and lead.</p>
     </div>
-    <div class="value-card">
+    <div class="value-card reveal">
       <div class="value-icon-wrap">💪</div>
       <h4>Grit</h4>
       <p>The strength to rise and rebuild after any setback. Every time, without exception.</p>
     </div>
-    <div class="value-card">
+    <div class="value-card reveal">
       <div class="value-icon-wrap">🌍</div>
       <h4>Global Citizenship</h4>
       <p>Rooted in African identity, proud of Kenyan heritage, and connected to the whole world.</p>
@@ -201,5 +304,14 @@
   </div>
 </footer>
 
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) { el.target.classList.add('revealed'); observer.unobserve(el.target); }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

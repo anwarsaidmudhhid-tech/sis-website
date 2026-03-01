@@ -650,3 +650,164 @@ footer { background: var(--navy); padding: 65px 6% 30px; }
   .hero-logo-watermark { width: 260px; height: 260px; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ══════════════════════════════════════
+   PRELOADER
+══════════════════════════════════════ */
+#preloader {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--navy);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+#preloader.hidden { opacity: 0; visibility: hidden; }
+.preloader-ring {
+  width: 100px; height: 100px; border-radius: 50%;
+  border: 2px solid rgba(212,175,55,0.15);
+  border-top-color: var(--gold);
+  animation: spin 1.2s linear infinite;
+  position: absolute;
+}
+.preloader-logo {
+  width: 70px; height: 70px; border-radius: 50%;
+  object-fit: cover; border: 2px solid rgba(212,175,55,0.4);
+  animation: pulseLogo 1.5s ease-in-out infinite;
+}
+.preloader-text {
+  margin-top: 70px; color: var(--gold);
+  font-size: 0.62rem; letter-spacing: 5px; font-weight: 700;
+  opacity: 0.7; animation: fadeInOut 1.5s ease-in-out infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulseLogo { 0%,100% { opacity: 0.8; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+@keyframes fadeInOut { 0%,100% { opacity: 0.4; } 50% { opacity: 0.9; } }
+
+/* ══════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════ */
+.reveal {
+  opacity: 0; transform: translateY(35px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+.reveal-left {
+  opacity: 0; transform: translateX(-35px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.revealed { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0; transform: translateX(35px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.revealed { opacity: 1; transform: translateX(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ══════════════════════════════════════
+   NAV — Scrolled glass state
+══════════════════════════════════════ */
+nav.scrolled {
+  background: rgba(5,15,40,0.97);
+  box-shadow: 0 2px 30px rgba(0,0,0,0.4);
+  border-bottom-color: rgba(212,175,55,0.3);
+}
+
+/* ══════════════════════════════════════
+   PARTICLES CANVAS
+══════════════════════════════════════ */
+#particles-canvas {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; opacity: 0.5;
+}
+
+/* ══════════════════════════════════════
+   MOBILE DRAWER
+══════════════════════════════════════ */
+.mobile-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  z-index: 1100; opacity: 0; visibility: hidden;
+  transition: all 0.3s;
+}
+.mobile-overlay.open { opacity: 1; visibility: visible; }
+.mobile-drawer {
+  position: fixed; top: 0; right: -320px; bottom: 0;
+  width: 300px; background: var(--navy);
+  z-index: 1200; padding: 30px 28px;
+  transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
+  border-left: 1px solid rgba(212,175,55,0.15);
+  overflow-y: auto;
+}
+.mobile-drawer.open { right: 0; }
+.drawer-close {
+  background: none; border: none; color: var(--gold);
+  font-size: 1.5rem; cursor: pointer; float: right;
+  line-height: 1; padding: 0;
+}
+.drawer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 35px; margin-top: 10px; }
+.drawer-logo img { width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; }
+.drawer-logo span { color: var(--white); font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; }
+.drawer-nav { list-style: none; margin-bottom: 30px; }
+.drawer-nav li { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.drawer-nav li a { display: block; padding: 15px 0; color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 500; transition: color 0.2s, padding 0.2s; }
+.drawer-nav li a:hover { color: var(--gold); padding-left: 8px; }
+.drawer-cta { display: block; background: var(--gold); color: var(--navy); text-align: center; padding: 13px; font-size: 0.75rem; letter-spacing: 2px; font-weight: 700; text-decoration: none; margin-top: 10px; }
+
+/* ══════════════════════════════════════
+   DIAGONAL SECTION DIVIDERS
+══════════════════════════════════════ */
+.pillars { clip-path: polygon(0 0, 100% 30px, 100% 100%, 0 calc(100% - 30px)); padding-top: 120px; padding-bottom: 120px; }
+.houses-home { clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0 100%); padding-top: 110px; padding-bottom: 110px; }
+
+/* ══════════════════════════════════════
+   GOLD SHIMMER EFFECT
+══════════════════════════════════════ */
+.pillar-card, .house-home-card, .testimonial-card {
+  overflow: hidden; position: relative;
+}
+.pillar-card::after, .house-home-card::after {
+  content: '';
+  position: absolute; top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212,175,55,0.06), transparent);
+  transition: left 0.6s ease;
+}
+.pillar-card:hover::after, .house-home-card:hover::after { left: 130%; }
+
+/* ══════════════════════════════════════
+   HERO PARALLAX (handled by JS)
+══════════════════════════════════════ */
+.hero-slides { will-change: transform; }
+
+/* ══════════════════════════════════════
+   COUNTER ANIMATION
+══════════════════════════════════════ */
+.stat-num[data-target] { transition: all 0.3s; }
+
+/* ══════════════════════════════════════
+   ANIMATED UNDERLINE - MOTTO
+══════════════════════════════════════ */
+.hero-motto {
+  position: relative; display: inline-block;
+}
+.hero-motto::after {
+  content: ''; position: absolute; bottom: -4px;
+  left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  animation: shimmerLine 3s ease-in-out infinite;
+}
+@keyframes shimmerLine {
+  0%,100% { opacity: 0.3; transform: scaleX(0.5); }
+  50% { opacity: 1; transform: scaleX(1); }
+}
+
+/* ══════════════════════════════════════
+   PROGRESS BAR (page load)
+══════════════════════════════════════ */
+#progress-bar {
+  position: fixed; top: 0; left: 0; height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  z-index: 10000; width: 0%; transition: width 0.1s;
+}

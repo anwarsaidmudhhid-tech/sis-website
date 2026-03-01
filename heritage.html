@@ -6,6 +6,92 @@
   <title>Our Heritage | Silvertown International School</title>
   <meta name="description" content="Discover the rich history behind the Silvertown name and how it connects to our school's mission in Mombasa, Kenya.">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Watermark motto */
+    .heritage-pillars {
+      position: relative;
+      overflow: hidden;
+    }
+    .heritage-pillars::before {
+      content: '"Connecting Minds, Bridging Worlds"';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-family: 'Playfair Display', serif;
+      color: #0A1F44;
+      opacity: 0.04;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 0;
+      text-align: center;
+      line-height: 1.4;
+      width: 200%;
+      letter-spacing: 0.02em;
+    }
+    .heritage-themes {
+      position: relative;
+      z-index: 1;
+      /* Vertical gold timeline line */
+    }
+    /* Timeline vertical line container */
+    .heritage-themes-timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 60px;
+    }
+    .heritage-themes-timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 30px;
+      bottom: 30px;
+      width: 3px;
+      background: linear-gradient(to bottom, #D4AF37, #C0C0C0, #D4AF37);
+      border-radius: 2px;
+    }
+    .heritage-themes-timeline .theme-card {
+      position: relative;
+      margin: 0;
+    }
+    .heritage-themes-timeline .theme-card::before {
+      content: '';
+      position: absolute;
+      left: -48px;
+      top: 28px;
+      width: 18px;
+      height: 18px;
+      background: #D4AF37;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px #D4AF37;
+    }
+    /* Enhanced theme-card styles */
+    .heritage-themes-timeline .theme-card {
+      border-left: 4px solid #D4AF37;
+      box-shadow: 0 4px 24px rgba(10,31,68,0.10);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .heritage-themes-timeline .theme-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 8px 32px rgba(212,175,55,0.18);
+    }
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
 
@@ -38,14 +124,14 @@
 <!-- HERITAGE INTRO -->
 <section class="heritage-intro">
   <div class="heritage-intro-grid">
-    <div>
+    <div class="reveal">
       <p class="section-eyebrow" style="text-align:left">The Name</p>
       <h2 class="section-title" style="text-align:left">Why <span class="em">Silvertown?</span></h2>
       <div class="divider" style="justify-content:flex-start; margin-bottom:30px"><div class="divider-diamond"></div></div>
       <p class="body-text">Silvertown, located in the Royal Docks area of East London, has a history that is essentially a timeline of the British Industrial Revolution — from swampy marshland to a global manufacturing powerhouse, through devastating tragedy, and finally into a massive modern regeneration project.</p>
       <p class="body-text">The area is named after <strong>Samuel Winkworth Silver</strong>, a clothing manufacturer who moved his waterproof factory to this isolated marshland in 1852. His factory became the catalyst for an entire industrial town — and eventually, a global hub of connection.</p>
     </div>
-    <div class="heritage-quote-block">
+    <div class="heritage-quote-block reveal">
       <div class="hq-number">1852</div>
       <p class="hq-text">The year Samuel Silver founded the district that would become the most important industrial hub of the Victorian era.</p>
     </div>
@@ -54,12 +140,14 @@
 
 <!-- THREE THEMES -->
 <section class="heritage-pillars" style="background:var(--off-white)">
-  <p class="section-eyebrow">The Connection to SIS</p>
-  <h2 class="section-title">How History <span class="em">Shapes Our Mission</span></h2>
-  <div class="divider"><div class="divider-diamond"></div></div>
-  <div class="heritage-themes">
+  <p class="section-eyebrow reveal">The Connection to SIS</p>
+  <h2 class="section-title reveal">How History <span class="em">Shapes Our Mission</span></h2>
+  <div class="divider reveal"><div class="divider-diamond"></div></div>
 
-    <div class="theme-card">
+  <!-- Timeline wrapper replaces .heritage-themes -->
+  <div class="heritage-themes-timeline">
+
+    <div class="theme-card reveal">
       <div class="theme-icon">🌐</div>
       <div class="theme-content">
         <h3>Global Connectivity</h3>
@@ -69,7 +157,7 @@
       </div>
     </div>
 
-    <div class="theme-card">
+    <div class="theme-card reveal">
       <div class="theme-icon">⚗️</div>
       <div class="theme-content">
         <h3>The Art of Refinement</h3>
@@ -79,7 +167,7 @@
       </div>
     </div>
 
-    <div class="theme-card">
+    <div class="theme-card reveal">
       <div class="theme-icon">💪</div>
       <div class="theme-content">
         <h3>Resilience & Transformation</h3>
@@ -94,11 +182,11 @@
 
 <!-- TWO PORT CITIES -->
 <section class="two-cities">
-  <p class="section-eyebrow">The Parallel</p>
-  <h2 class="section-title">Two Port Cities. <span class="em">One Vision.</span></h2>
-  <div class="divider"><div class="divider-diamond"></div></div>
+  <p class="section-eyebrow reveal">The Parallel</p>
+  <h2 class="section-title reveal">Two Port Cities. <span class="em">One Vision.</span></h2>
+  <div class="divider reveal"><div class="divider-diamond"></div></div>
   <div class="cities-grid">
-    <div class="city-card">
+    <div class="city-card reveal">
       <div class="city-flag">🇬🇧</div>
       <h3>Silvertown, London</h3>
       <ul class="city-list">
@@ -109,13 +197,13 @@
         <li>Now reborn as a Smart Tech Quarter</li>
       </ul>
     </div>
-    <div class="city-connector">
+    <div class="city-connector reveal">
       <div class="connector-line"></div>
       <div class="connector-icon">🎓</div>
       <div class="connector-line"></div>
       <p>One School<br>Connecting Both</p>
     </div>
-    <div class="city-card">
+    <div class="city-card reveal">
       <div class="city-flag">🇰🇪</div>
       <h3>Mombasa, Kenya</h3>
       <ul class="city-list">
@@ -131,7 +219,7 @@
 
 <!-- VISION STATEMENT -->
 <section class="vision-statement">
-  <div class="vs-inner">
+  <div class="vs-inner reveal">
     <p class="section-eyebrow">Our Founding Vision</p>
     <blockquote>
       "Like the historic district from which we take our name, Silvertown International School is built on a foundation of Global Connection and Enduring Resilience. Just as Silvertown once laid the cables that united the continents, we empower our students to communicate across cultures and lead with innovation in an ever-changing world."
@@ -177,5 +265,14 @@
   </div>
 </footer>
 
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) { el.target.classList.add('revealed'); observer.unobserve(el.target); }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

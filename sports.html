@@ -6,6 +6,69 @@
   <title>Sports | Silvertown International School</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Sporting Philosophy Quote Block */
+    .sport-philosophy-quote {
+      background: #0A1F44;
+      width: 100%;
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sport-philosophy-quote::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18rem;
+      font-family: 'Playfair Display', serif;
+      color: #D4AF37;
+      opacity: 0.06;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .sport-philosophy-quote .spq-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #D4AF37;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 28px;
+      display: block;
+    }
+    .sport-philosophy-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: #D4AF37;
+      line-height: 1.55;
+      max-width: 860px;
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .sport-philosophy-quote cite {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(192,192,192,0.7);
+      font-style: normal;
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
 <body>
 
@@ -39,49 +102,58 @@
   </div>
 </section>
 
+<!-- OUR SPORTING PHILOSOPHY QUOTE BLOCK -->
+<div class="sport-philosophy-quote">
+  <span class="spq-eyebrow">Our Sporting Philosophy</span>
+  <blockquote>
+    "Sport is not a reward for academic success — it is an equal partner in the education of the whole child. On every pitch, in every pool, and on every track, Silvertown students learn the lessons that define a life: how to lead, how to follow, how to lose with dignity and win with grace."
+  </blockquote>
+  <cite>— Silvertown International School · Founding Sporting Philosophy</cite>
+</div>
+
 <!-- SPORTS GRID -->
 <section style="background:var(--white); padding-top:70px">
-  <p class="section-eyebrow">Our Sports</p>
-  <h2 class="section-title">Built to <span class="em">Compete & Excel</span></h2>
-  <div class="divider"><div class="divider-diamond"></div></div>
+  <p class="section-eyebrow reveal">Our Sports</p>
+  <h2 class="section-title reveal">Built to <span class="em">Compete & Excel</span></h2>
+  <div class="divider reveal"><div class="divider-diamond"></div></div>
   <div class="sports-grid">
 
-    <div class="sport-card">
+    <div class="sport-card reveal">
       <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Football" />
       <div class="sport-overlay"></div>
       <div class="sport-icon">⚽</div>
       <div class="sport-info"><h3>Football</h3><p>Boys & Girls Teams · Inter-school Competitions</p></div>
     </div>
 
-    <div class="sport-card">
+    <div class="sport-card reveal">
       <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80" alt="Basketball" />
       <div class="sport-overlay"></div>
       <div class="sport-icon">🏀</div>
       <div class="sport-info"><h3>Basketball</h3><p>Indoor Court · Regional Championships</p></div>
     </div>
 
-    <div class="sport-card">
+    <div class="sport-card reveal">
       <img src="https://images.unsplash.com/photo-1560090995-01632a28895b?w=800&q=80" alt="Swimming" />
       <div class="sport-overlay"></div>
       <div class="sport-icon">🏊</div>
       <div class="sport-info"><h3>Swimming</h3><p>Olympic Pool · Competitive Squads</p></div>
     </div>
 
-    <div class="sport-card">
+    <div class="sport-card reveal">
       <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80" alt="Athletics" />
       <div class="sport-overlay"></div>
       <div class="sport-icon">🏃</div>
       <div class="sport-info"><h3>Athletics</h3><p>Track & Field · Kenya National Events</p></div>
     </div>
 
-    <div class="sport-card">
+    <div class="sport-card reveal">
       <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80" alt="Tennis" />
       <div class="sport-overlay"></div>
       <div class="sport-icon">🎾</div>
       <div class="sport-info"><h3>Tennis</h3><p>Hard Courts · Coaching Programmes</p></div>
     </div>
 
-    <div class="sport-card">
+    <div class="sport-card reveal">
       <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80" alt="Volleyball" />
       <div class="sport-overlay"></div>
       <div class="sport-icon">🏐</div>
@@ -94,10 +166,10 @@
 <!-- PE PHILOSOPHY -->
 <section class="pe-philosophy">
   <div class="pe-grid">
-    <div class="pe-img">
+    <div class="pe-img reveal">
       <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?w=800&q=80" alt="Students sport" />
     </div>
-    <div class="pe-text">
+    <div class="pe-text reveal">
       <p class="section-eyebrow" style="text-align:left">Our Philosophy</p>
       <h2 class="section-title" style="text-align:left; font-size:2rem">Sport Builds<br><span class="em">Character</span></h2>
       <p class="body-text">At Silvertown International School, we believe that physical education is as important as academic achievement. Sport teaches lessons that no classroom can — teamwork, discipline, resilience under pressure, and how to win and lose with grace.</p>
@@ -110,16 +182,16 @@
 
 <!-- FACILITIES -->
 <section style="background:var(--navy)">
-  <p class="section-eyebrow">Facilities</p>
-  <h2 class="section-title" style="color:white">World-Class <span class="em">Facilities</span></h2>
-  <p class="section-subtitle">Planned sports facilities at Silvertown International School, Mombasa.</p>
+  <p class="section-eyebrow reveal">Facilities</p>
+  <h2 class="section-title reveal" style="color:white">World-Class <span class="em">Facilities</span></h2>
+  <p class="section-subtitle reveal">Planned sports facilities at Silvertown International School, Mombasa.</p>
   <div class="info-grid" style="max-width:1000px; margin:0 auto;">
-    <div class="info-card"><span class="info-icon">⚽</span><div class="info-label">Football Pitches</div><div class="info-value">Full-size grass & 5-a-side artificial</div></div>
-    <div class="info-card"><span class="info-icon">🏊</span><div class="info-label">Swimming Pool</div><div class="info-value">25m Olympic-standard pool</div></div>
-    <div class="info-card"><span class="info-icon">🏀</span><div class="info-label">Sports Hall</div><div class="info-value">Basketball, Volleyball, Badminton</div></div>
-    <div class="info-card"><span class="info-icon">🏃</span><div class="info-label">Athletics Track</div><div class="info-value">400m all-weather track</div></div>
-    <div class="info-card"><span class="info-icon">🎾</span><div class="info-label">Tennis Courts</div><div class="info-value">4 hard courts, floodlit</div></div>
-    <div class="info-card"><span class="info-icon">💪</span><div class="info-label">Fitness Suite</div><div class="info-value">Modern gym & fitness studio</div></div>
+    <div class="info-card reveal"><span class="info-icon">⚽</span><div class="info-label">Football Pitches</div><div class="info-value">Full-size grass & 5-a-side artificial</div></div>
+    <div class="info-card reveal"><span class="info-icon">🏊</span><div class="info-label">Swimming Pool</div><div class="info-value">25m Olympic-standard pool</div></div>
+    <div class="info-card reveal"><span class="info-icon">🏀</span><div class="info-label">Sports Hall</div><div class="info-value">Basketball, Volleyball, Badminton</div></div>
+    <div class="info-card reveal"><span class="info-icon">🏃</span><div class="info-label">Athletics Track</div><div class="info-value">400m all-weather track</div></div>
+    <div class="info-card reveal"><span class="info-icon">🎾</span><div class="info-label">Tennis Courts</div><div class="info-value">4 hard courts, floodlit</div></div>
+    <div class="info-card reveal"><span class="info-icon">💪</span><div class="info-label">Fitness Suite</div><div class="info-value">Modern gym & fitness studio</div></div>
   </div>
 </section>
 
@@ -156,6 +228,13 @@
 <script>
 window.addEventListener('scroll',()=>{ const b=document.getElementById('backToTop'); window.scrollY>400?b.classList.add('visible'):b.classList.remove('visible'); });
 function toggleMobileNav(){const l=document.querySelector('.nav-links');l.style.display=l.style.display==='flex'?'none':'flex';if(l.style.display==='flex'){l.style.flexDirection='column';l.style.position='absolute';l.style.top='70px';l.style.left='0';l.style.right='0';l.style.background='rgba(10,31,68,0.98)';l.style.padding='20px 0';l.style.zIndex='999';}}
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) { el.target.classList.add('revealed'); observer.unobserve(el.target); }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
