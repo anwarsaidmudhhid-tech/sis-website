@@ -814,14 +814,29 @@ footer { background: var(--navy); padding: 65px 6% 30px; }
 @media (max-width: 600px) {
   section { padding: 60px 4%; }
   .hero { padding-top: 90px; }
+  .hero-panel { padding: 24px; }
   .houses-home-grid { grid-template-columns: repeat(2,1fr); }
   .houses-grid { grid-template-columns: 1fr; }
   .sports-grid { grid-template-columns: 1fr; }
   .news-grid { grid-template-columns: 1fr; }
   .subjects-visual-grid { grid-template-columns: 1fr; }
+  .photos-grid { grid-template-columns: 1fr 1fr; }
+  .photo-item.photo-large { grid-column: span 2; }
   .footer-bottom { flex-direction: column; text-align: center; }
 
   .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero-grid { gap: 28px; }
+  .hero-panel-grid { grid-template-columns: 1fr; }
+  .hero-panel-list li { font-size: 0.78rem; }
+  .hero-stats { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .houses-home-grid { grid-template-columns: 1fr; }
+  .photos-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .photo-item.photo-large { grid-column: span 1; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .pillars-grid { grid-template-columns: 1fr; }
 }
 
 /* ══════════════════════════════════════
